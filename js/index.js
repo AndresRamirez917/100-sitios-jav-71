@@ -3,13 +3,13 @@ async function getData() {
     const coctail = await result.json();
     console.log(coctail);
     const randDrink = coctail.drinks.sort(() => 0.5 - Math.random()).slice(0,4);
-    randDrink.forEach(element => {
+    const lengua = randDrink.slice(0,4);
+    randDrink.forEach((element, index) => {
         const box = document.createRange().createContextualFragment(`
-            
              <div class="box box-1">
                     <img src="${element.strDrinkThumb}" alt="">
                     <div class="box-text">
-                        <h2>Project One</h2>
+                        <h2>Project ${index + 1}</h2>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ab itaque officiis voluptates culpa cumque aspernatur consequuntur tempora reprehenderit ad.</p>
                     </div>
                 </div>
