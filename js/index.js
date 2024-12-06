@@ -1,3 +1,26 @@
+async function getData() {
+    const result = await fetch('https://thecocktaildb.com/api/json/v1/1/search.php?s=margarita');
+    const coctail = await result.json();
+    console.log(coctail);
+    const randDrink = coctail.drinks.sort(() => 0.5 - Math.random()).slice(0,4);
+    randDrink.forEach(element => {
+        const box = document.createRange().createContextualFragment(`
+            
+             <div class="box box-1">
+                    <img src="${element.strDrinkThumb}" alt="">
+                    <div class="box-text">
+                        <h2>Project One</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ab itaque officiis voluptates culpa cumque aspernatur consequuntur tempora reprehenderit ad.</p>
+                    </div>
+                </div>
+            
+            `)
+            const portafolio_flex = document.querySelector('.porfolio-flex');
+            portafolio_flex.append(box)
+    })
+}
+getData()
+
 const btn_validar = document.getElementById('btn-validar').onclick = (e) => {
     e.preventDefault();
     const inputArr = [
