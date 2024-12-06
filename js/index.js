@@ -8,6 +8,9 @@ const btn_validar = document.getElementById('btn-validar').onclick = (e) => {
         {id: "mensaje", value: "Mensaje"}
     ]
     for(let {id, value} of inputArr){
-        const elemento 
+        const elemento = document.getElementById(id);
+        if(elemento.value.trim() === ""){
+            
+        }
     }
 }
