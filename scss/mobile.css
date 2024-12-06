@@ -1,0 +1,30 @@
+#mainheader .navbar .logo {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+#mainheader .navbar ul {
+  display: block;
+  text-align: center;
+}
+#mainheader .navbar ul li {
+  text-align: center;
+}
+#mainheader .navbar .container {
+  display: block;
+}
+#mainheader #showcase .showcase-content {
+  text-align: center;
+}
+
+#portfolio .porfolio-flex {
+  display: block;
+}
+
+#about .about-flex {
+  display: block;
+}
+#about .about-flex iframe {
+  width: 100%;
+}/*# sourceMappingURL=mobile.css.map */

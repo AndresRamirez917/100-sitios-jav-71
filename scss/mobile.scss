@@ -1,0 +1,44 @@
+//mainheader
+#mainheader {
+    .navbar {
+        .logo {
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        ul {
+            display: block;
+            text-align: center;
+            li {
+                text-align: center;
+            }
+        }
+        .container {
+            display: block;
+        }
+    }
+    //showcase
+    #showcase {
+        .showcase-content {
+            text-align: center;
+        }
+    }
+}
+
+//portfolio
+#portfolio {
+    .porfolio-flex {
+        display: block;
+    }
+}
+
+//about
+#about {
+    .about-flex {
+        display: block;
+        iframe {
+            width: 100%;
+        }
+    }
+}
