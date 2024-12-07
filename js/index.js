@@ -1,3 +1,14 @@
+// Se declara fuera de la función por si se necesita en otro lugar
+// sino fuera así, solo podría ser usada desde la función.
+const textNumbers = {
+    1:"One",
+    2:"Two",
+    3:"Three",
+    4:"Four",
+}
+function numbToText(numero) {
+return textNumbers[numero] || numero
+}
 async function getData() {
     const result = await fetch('https://thecocktaildb.com/api/json/v1/1/search.php?s=margarita');
     const coctail = await result.json();
@@ -9,7 +20,7 @@ async function getData() {
              <div class="box box-1">
                     <img src="${element.strDrinkThumb}" alt="">
                     <div class="box-text">
-                        <h2>Project ${index + 1}</h2>
+                        <h2>Project ${numbToText(index + 1)}</h2>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ab itaque officiis voluptates culpa cumque aspernatur consequuntur tempora reprehenderit ad.</p>
                     </div>
                 </div>
